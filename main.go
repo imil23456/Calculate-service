@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/calculator", handler.HandleCalculation)
+	http.HandleFunc("/api/v1/calculate", handler.HandleCalculation)
 
 	log.Println("Server is running on port :8080")
 	err := http.ListenAndServe(":8080", nil)
