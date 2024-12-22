@@ -9,10 +9,7 @@
     ```bash
     git clone (https://github.com/imil23456/Calculate-service/tree/master)
     ```
-3. Перейдите в папку проекта и запустите сервер:
-    ```bash
-    go run ./cmd/calc_service/...
-    ```
+3. Перейдите в папку проекта и запустите сервер.
 4. Сервис будет доступен по адресу: [http://localhost:8080/api/v1/calculate](http://localhost:8080/api/v1/calculate).
 
 ## Примеры использования
