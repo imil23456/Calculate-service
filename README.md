@@ -52,22 +52,4 @@ curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: appl
 **HTTP-код ответа:** `422` (Unprocessable Entity).
 
 
-### Ошибка 405 (Неподдерживаемый запрос)
-
-**Пример запроса через curl:**
-
-```bas
-curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: application/json" --data "{\"expression\": \"11-12-81+24+712*42/34\"}"
-```
-
-**Пример ответа:**
-
-```json
-{
-    "error": "Only POST method available"
-}
-```
-
-**HTTP-код ответа:** `405` (Method not allowed)
-
 
