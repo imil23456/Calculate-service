@@ -7,17 +7,28 @@
 1. Установите [Go](https://go.dev/dl/).
 2. Склонируйте проект с GitHub:
     ```bash
-    git clone (https://github.com/imil23456/Calculate-service/tree/master)
+    git clone https://github.com/imil23456/Calculate-service/tree/master
     ```
 3. Перейдите в папку проекта и запустите сервер.
-4. Сервис будет доступен по адресу: [http://localhost:8080/api/v1/calculate](http://localhost:8080/api/v1/calculate).
+```
+cd Calculate-service
+
+```
+4. Для запуска проекта выполните следующую команду:
+
+```
+go run main.go
+```
+5. Сервис будет доступен по адресу: [http://localhost:8080/api/v1/calculate](http://localhost:8080/api/v1/calculate).
 
 ## Примеры использования
 
 ## Успешный запрос
 
-**Пример запроса через curl:**
+**Пример запроса через curl**
 
+
+**Пример 1**
 ```bash
 curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: application/json" --data "{\"expression\": \"2+2*2\"}"
 ```
@@ -30,6 +41,33 @@ curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: appl
 ```
 **HTTP-код ответа:** `200` (всё прошло успешно).
 
+
+**Пример 2**
+```bash
+curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: application/json" --data "{\"expression\": \"2+2*2+10\"}"
+```
+**Пример ответа:**
+
+```json
+{
+    "result": "16"
+}
+```
+**HTTP-код ответа:** `200` (всё прошло успешно).
+
+
+**Пример 3**
+```bash
+curl http://localhost:8080/api/v1/calculate -X POST --header "Content-Type: application/json" --data "{\"expression\": \"(2+2+2)/3\"}"
+```
+**Пример ответа:**
+
+```json
+{
+    "result": "2"
+}
+```
+**HTTP-код ответа:** `200` (всё прошло успешно).
 ### Ошибка 422 (Некорректное выражение)
 
 **Пример запроса через curl:**
